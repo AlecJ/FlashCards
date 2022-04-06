@@ -1,0 +1,10 @@
+env/
+venv/
+.env
+.env.PROD
+__pycache__/
+node_modules/
+
+.coverage
+htmlcov/
+.pytest_cache/

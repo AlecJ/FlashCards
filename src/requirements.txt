@@ -1,0 +1,31 @@
+# Flask
+Flask==2.0.2
+Flask-RESTful==0.3.9
+flask-cors==3.0.10
+click==8.0.3
+itsdangerous==2.0.1
+Jinja2==3.0.2
+MarkupSafe==2.0.1
+Werkzeug==2.0.2
+
+# Database
+Flask-SQLAlchemy==2.4.4
+psycopg2-binary==2.9.3
+
+# Migrations
+Flask-Migrate==2.5.3
+
+# Testing
+pytest==7.1.1
+pytest-mock==3.7.0
+coverage==6.3.2
+
+# Deployment
+gunicorn==20.0.4 
+supervisor==4.2.1
+
+# Environment variable parsing
+environs==9.2.0
+
+# Other
+Scrapy==2.5.1

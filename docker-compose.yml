@@ -1,0 +1,27 @@
+version: "3"
+
+volumes:
+  pgdata:
+
+services:
+  pgsql:
+    image: postgres:14.2
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  flask:
+    build:
+      context: .
+      dockerfile: ./deploy/docker/Dockerfile.dev
+    volumes: ["./src:/app/src",
+              "./migrations:/app/migrations",
+              ".env:/app/.env"]
+    ports: ["5000:5000"]
+    depends_on:
+      - pgsql
+    tty: true
